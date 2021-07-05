@@ -20,6 +20,7 @@
         <property name="mappings">
             <props>
                 <prop key="index.htm">indexController</prop>
+                <prop key="formAltaMotor.htm">AltaMotorController</prop>
             </props>
         </property>
     </bean>
@@ -29,6 +30,13 @@
           p:prefix="/WEB-INF/jsp/"
           p:suffix=".jsp" />
 
+    
+    <!--
+    Los controladores de la aplicación
+    -->
+    <bean name="AltaMotorController"
+          class="es.institutotm.pruebamod5.controllers.AltaMotorController" />
+    
     <!--
     The index controller.
     -->
