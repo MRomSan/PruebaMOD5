@@ -38,6 +38,7 @@
                             <th>Potencia</th>
                             <th>Peso</th>
                             <th>Cantidad</th>
+                            <th>Óptimo</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -48,6 +49,7 @@
                             <td><c:out value="${motor.potencia}"></c:out></td>
                             <td><c:out value="${motor.peso}"></c:out></td>
                             <td><c:out value="${motor.cantidad}"></c:out></td>
+                            <td><c:out value="${motor.peso/motor.potencia<=10.0?'Sí':'No'}"></c:out></td>
                         </tr>
                         </c:forEach>
                     </tbody>
