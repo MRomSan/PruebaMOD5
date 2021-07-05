@@ -30,7 +30,7 @@ public class AltaMotorController {
         this.validar = new ValidaMotor();
     }
     
-    @RequestMapping(value = "formAltaMotor.htm", method = RequestMethod.GET)
+    @RequestMapping(value = "altaMotor.htm", method = RequestMethod.GET)
     public ModelAndView form() {
         Motor m = new Motor();
         ModelAndView mav = new ModelAndView();
@@ -39,7 +39,7 @@ public class AltaMotorController {
         return mav;
     }
     
-    @RequestMapping(value = "formAltaMotor.htm", method = RequestMethod.POST)
+    @RequestMapping(value = "altaMotor.htm", method = RequestMethod.POST)
     public ModelAndView form(@ModelAttribute ("m") Motor m, BindingResult result) {
         this.validar.validate(m, result);
         if(result.hasErrors()) {
@@ -49,8 +49,7 @@ public class AltaMotorController {
             return mav;
         } else {
             this.jdbc.update("INSERT INTO motores VALUES (?,?,?,?,?)", m.getModelo(), m.getFabricante(), m.getPotencia(), m.getPeso(), m.getCantidad());
-            ModelAndView mav = new ModelAndView("formAltaMotor");
-            mav.addObject("mensaje", "<div class='alert alert-success mensaje'>Inserción realizada con éxito</div>");
+            ModelAndView mav = new ModelAndView("redirect:/listadoMotores.htm?confirmacion=1");
             return mav;
         }
     }

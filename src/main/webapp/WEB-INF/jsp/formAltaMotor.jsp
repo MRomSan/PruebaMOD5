@@ -14,15 +14,8 @@
         <title>Alta de Motor</title>
     </head>
     <body>
-        <script type="text/javascript">
-            function ocultar() {
-                $(".mensaje").fadeOut(1500);
-            } 
-            setTimeout("ocultar()", 3000);
-        </script>
         <div class="row">
             <div class="col-6 offset-3">
-                ${mensaje}
                 <form:form commandName="m">
                     <form:errors path="*" element="div" cssClass="alert alert-danger"></form:errors>
                     <form:label path="modelo">Modelo: </form:label>

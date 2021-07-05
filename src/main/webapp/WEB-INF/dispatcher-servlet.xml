@@ -20,7 +20,8 @@
         <property name="mappings">
             <props>
                 <prop key="index.htm">indexController</prop>
-                <prop key="formAltaMotor.htm">AltaMotorController</prop>
+                <prop key="altaMotor.htm">AltaMotorController</prop>
+                <prop key="listadoMotores.htm">ListadoMotorController</prop>
             </props>
         </property>
     </bean>
@@ -36,6 +37,8 @@
     -->
     <bean name="AltaMotorController"
           class="es.institutotm.pruebamod5.controllers.AltaMotorController" />
+    <bean name="ListadoMotorController"
+          class="es.institutotm.pruebamod5.controllers.ListadoMotorController" />
     
     <!--
     The index controller.
